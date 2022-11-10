@@ -1,0 +1,3 @@
+To run the program, enter the following command in the terminal:
+
+python lab_5_step_4_json_input.py --file translate_input.json

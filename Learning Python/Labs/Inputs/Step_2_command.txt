@@ -1,0 +1,3 @@
+To run the program, enter the following command in the terminal:
+
+python lab_5_step_2_cli_arguments.py --text "we are learning python on AWS" --source-language-code en --target-language-code fr
