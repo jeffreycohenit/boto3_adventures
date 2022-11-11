@@ -1,0 +1,3 @@
+To run the program, enter the following command into the terminal:
+
+python lab_9_step_2_errors.py --file translate_input.json
