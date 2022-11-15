@@ -1,0 +1,67 @@
+INFO:root:The SourceLanguageCode and TargetLanguageCode are valid - proceeding
+DEBUG:botocore.hooks:Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+DEBUG:botocore.hooks:Changing event name from before-call.apigateway to before-call.api-gateway
+DEBUG:botocore.hooks:Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+DEBUG:botocore.hooks:Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+DEBUG:botocore.hooks:Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+DEBUG:botocore.hooks:Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+DEBUG:botocore.hooks:Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+DEBUG:botocore.utils:IMDS ENDPOINT: http://169.254.169.254/
+DEBUG:botocore.credentials:Looking for credentials via: env
+DEBUG:botocore.credentials:Looking for credentials via: assume-role
+DEBUG:botocore.credentials:Looking for credentials via: assume-role-with-web-identity
+DEBUG:botocore.credentials:Looking for credentials via: sso
+DEBUG:botocore.credentials:Looking for credentials via: shared-credentials-file
+INFO:botocore.credentials:Found credentials in shared credentials file: ~/.aws/credentials
+DEBUG:botocore.loaders:Loading JSON file: /home/ec2-user/.local/lib/python3.7/site-packages/botocore/data/endpoints.json
+DEBUG:botocore.loaders:Loading JSON file: /home/ec2-user/.local/lib/python3.7/site-packages/botocore/data/sdk-default-configuration.json
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x7fa5360f53b0>
+DEBUG:botocore.loaders:Loading JSON file: /home/ec2-user/.local/lib/python3.7/site-packages/botocore/data/translate/2017-07-01/service-2.json
+DEBUG:botocore.loaders:Loading JSON file: /home/ec2-user/.local/lib/python3.7/site-packages/botocore/data/translate/2017-07-01/endpoint-rule-set-1.json.gz
+DEBUG:botocore.loaders:Loading JSON file: /home/ec2-user/.local/lib/python3.7/site-packages/botocore/data/partitions.json
+DEBUG:botocore.hooks:Event creating-client-class.translate: calling handler <function add_generate_presigned_url at 0x7fa536182cb0>
+DEBUG:botocore.endpoint:Setting translate timeout as (60, 60)
+DEBUG:botocore.loaders:Loading JSON file: /home/ec2-user/.local/lib/python3.7/site-packages/botocore/data/_retry.json
+DEBUG:botocore.client:Registering retry handlers for service: translate
+DEBUG:botocore.regions:Calling endpoint provider with parameters: {'Region': 'us-east-1', 'UseDualStack': False, 'UseFIPS': False}
+DEBUG:botocore.regions:Endpoint provider result: https://translate.us-east-1.amazonaws.com
+DEBUG:botocore.hooks:Event before-parameter-build.translate.TranslateText: calling handler <function generate_idempotent_uuid at 0x7fa535eda950>
+DEBUG:botocore.hooks:Event before-call.translate.TranslateText: calling handler <function add_recursion_detection_header at 0x7fa535ed7680>
+DEBUG:botocore.hooks:Event before-call.translate.TranslateText: calling handler <function inject_api_version_header_if_needed at 0x7fa535e64200>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=TranslateText) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'X-Amz-Target': 'AWSShineFrontendService_20170701.TranslateText', 'Content-Type': 'application/x-amz-json-1.1', 'User-Agent': 'Boto3/1.26.3 Python/3.7.10 Linux/4.14.296-222.539.amzn2.x86_64 Botocore/1.29.4'}, 'body': b'{"Text": "I am learning to code in AWS", "SourceLanguageCode": "en", "TargetLanguageCode": "fr"}', 'url': 'https://translate.us-east-1.amazonaws.com/', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x7fa535cd3790>, 'has_streaming_input': False, 'auth_type': None}}
+DEBUG:botocore.hooks:Event request-created.translate.TranslateText: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x7fa535cd3690>>
+DEBUG:botocore.hooks:Event choose-signer.translate.TranslateText: calling handler <function set_operation_specific_signer at 0x7fa535eda830>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+POST
+/
+
+content-type:application/x-amz-json-1.1
+host:translate.us-east-1.amazonaws.com
+x-amz-date:20221111T124947Z
+x-amz-security-token:IQoJb3JpZ2luX2VjEJX//////////wEaCXVzLWVhc3QtMSJHMEUCIF4iJaiVyfNHDpb7jo8jTDvkAsAOrLXtwlNN7jgO8I26AiEAkzgrl4KUUepeF9XmuEUvshXfkrCvfLcG0k04FBUyCOkq9AMIjv//////////ARAAGgw0NDI0OTgyMjYyNTkiDOAQMaBzAisJMQfF8yrIA2Sf4cOOVmCxmdQ/VEH5KGsGBzk97sJEskdTAvWbHwJ4K8Ej9vVW21NpumdPclZnafG4/FQ/ypnnU1juvNPAqaUSC4HSZlyCU3AjlSvIhAtzWmJPGQMfUl9dulkAlwyRYLJyqveI12xOh0TJyJykmXzNSdw1qOcxx1HWqbl12Ny+M0uo0cnY3MYxSSkNQOE9wMgH7lYtSEOq70bOQsp7+zALSeY8R8HjwXv9Nq4kVaq4OAaviQiW9qYsjtxrFFZAY3wb++6W2VCDS/mILKndFfYo9p5MgAbh/ZPejr0ZcWQUu0LyvoAh7MR1jYXvaLXnzFUGDOwQTV3fHB1QhFnef8RiGw++j55/HpE6wUHRft1aOXqsiWWJ3M6v0afP/LUXqsNnHzDLl9/ueICWzkiHrb9R+4pu7WhqMEGMcpKA9aobjU9EclFbdcRAch/OUpBLgJH0tPomzFSbBcLT1lJws+Do9pXKtmI5NRPjrKZYVeHEo/W/6LbkLgMI4UXKlYkiLIvia6d3+bFRT4q3vLBoZA5mUCdoM0H9JyzDGgddQ3KsE3YfLRU2maZ2Ea3j/ju83xq05ijcNRoxXHw2HdWCM9k7OWXgbr96EjDO2bibBjqSAk4oBf78wZ6deRhPC6TDYXY1JFUzj1Bz7O/Df1NC4XZpxXrdSCRKov1AKXiywhZV0EGtyN0dcW6M01hUmMgCPpk85EBWnw1UV+0W9A/69N2sVqsvEtidcZ3Iw+nAwpS3lCHSRAb5lnSLsF2Itj2eyqTYQ2Lr9qEt0oC9DeeGpdXOgnQ0ByUtCr4sWta2tfBdrpVf4T25ulQkN6TvwruFJbUyY5R+ExgqK1nEMUmOhydWQ5qi4mVSOVMIi/kwQzWVxhMMPr4b0ud4bP1+hlIxys1g3AtcQ2I8chnlZ/DcafwyHTT/C3IpyKwdFSkPYLx1DIGP7438IWhQER6fH5dPTVuI3ZnkAMenU36p0GSVhQfdJ0s=
+x-amz-target:AWSShineFrontendService_20170701.TranslateText
+
+content-type;host;x-amz-date;x-amz-security-token;x-amz-target
+87c449b0971c1c902350d536470e5b7f3e0254286e7b0a4cd0a9033e05d40024
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20221111T124947Z
+20221111/us-east-1/translate/aws4_request
+0f6957f099b5cf91c22dbee745b5099447108d472f213ff28cf98f11e90e6c3b
+DEBUG:botocore.auth:Signature:
+d191740d8972c208de042448347ad1eba92aa5de1e9547ebdd2cd372583cbf56
+DEBUG:botocore.hooks:Event request-created.translate.TranslateText: calling handler <function add_retry_headers at 0x7fa535e648c0>
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://translate.us-east-1.amazonaws.com/, headers={'X-Amz-Target': b'AWSShineFrontendService_20170701.TranslateText', 'Content-Type': b'application/x-amz-json-1.1', 'User-Agent': b'Boto3/1.26.3 Python/3.7.10 Linux/4.14.296-222.539.amzn2.x86_64 Botocore/1.29.4', 'X-Amz-Date': b'20221111T124947Z', 'X-Amz-Security-Token': b'IQoJb3JpZ2luX2VjEJX//////////wEaCXVzLWVhc3QtMSJHMEUCIF4iJaiVyfNHDpb7jo8jTDvkAsAOrLXtwlNN7jgO8I26AiEAkzgrl4KUUepeF9XmuEUvshXfkrCvfLcG0k04FBUyCOkq9AMIjv//////////ARAAGgw0NDI0OTgyMjYyNTkiDOAQMaBzAisJMQfF8yrIA2Sf4cOOVmCxmdQ/VEH5KGsGBzk97sJEskdTAvWbHwJ4K8Ej9vVW21NpumdPclZnafG4/FQ/ypnnU1juvNPAqaUSC4HSZlyCU3AjlSvIhAtzWmJPGQMfUl9dulkAlwyRYLJyqveI12xOh0TJyJykmXzNSdw1qOcxx1HWqbl12Ny+M0uo0cnY3MYxSSkNQOE9wMgH7lYtSEOq70bOQsp7+zALSeY8R8HjwXv9Nq4kVaq4OAaviQiW9qYsjtxrFFZAY3wb++6W2VCDS/mILKndFfYo9p5MgAbh/ZPejr0ZcWQUu0LyvoAh7MR1jYXvaLXnzFUGDOwQTV3fHB1QhFnef8RiGw++j55/HpE6wUHRft1aOXqsiWWJ3M6v0afP/LUXqsNnHzDLl9/ueICWzkiHrb9R+4pu7WhqMEGMcpKA9aobjU9EclFbdcRAch/OUpBLgJH0tPomzFSbBcLT1lJws+Do9pXKtmI5NRPjrKZYVeHEo/W/6LbkLgMI4UXKlYkiLIvia6d3+bFRT4q3vLBoZA5mUCdoM0H9JyzDGgddQ3KsE3YfLRU2maZ2Ea3j/ju83xq05ijcNRoxXHw2HdWCM9k7OWXgbr96EjDO2bibBjqSAk4oBf78wZ6deRhPC6TDYXY1JFUzj1Bz7O/Df1NC4XZpxXrdSCRKov1AKXiywhZV0EGtyN0dcW6M01hUmMgCPpk85EBWnw1UV+0W9A/69N2sVqsvEtidcZ3Iw+nAwpS3lCHSRAb5lnSLsF2Itj2eyqTYQ2Lr9qEt0oC9DeeGpdXOgnQ0ByUtCr4sWta2tfBdrpVf4T25ulQkN6TvwruFJbUyY5R+ExgqK1nEMUmOhydWQ5qi4mVSOVMIi/kwQzWVxhMMPr4b0ud4bP1+hlIxys1g3AtcQ2I8chnlZ/DcafwyHTT/C3IpyKwdFSkPYLx1DIGP7438IWhQER6fH5dPTVuI3ZnkAMenU36p0GSVhQfdJ0s=', 'Authorization': b'AWS4-HMAC-SHA256 Credential=ASIAWOBXTDBJ7W2H4SOC/20221111/us-east-1/translate/aws4_request, SignedHeaders=content-type;host;x-amz-date;x-amz-security-token;x-amz-target, Signature=d191740d8972c208de042448347ad1eba92aa5de1e9547ebdd2cd372583cbf56', 'amz-sdk-invocation-id': b'd2c85149-69f1-48eb-81ca-3783446c6730', 'amz-sdk-request': b'attempt=1', 'Content-Length': '96'}>
+DEBUG:botocore.httpsession:Certificate path: /home/ec2-user/.local/lib/python3.7/site-packages/botocore/cacert.pem
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): translate.us-east-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://translate.us-east-1.amazonaws.com:443 "POST / HTTP/1.1" 200 101
+DEBUG:botocore.parsers:Response headers: {'x-amzn-RequestId': 'db4f79b0-7c9c-4d3f-841d-319947683050', 'Cache-Control': 'no-cache', 'Content-Type': 'application/x-amz-json-1.1', 'Content-Length': '101', 'Date': 'Fri, 11 Nov 2022 12:49:46 GMT'}
+DEBUG:botocore.parsers:Response body:
+b'{"SourceLanguageCode":"en","TargetLanguageCode":"fr","TranslatedText":"J\'apprends \xc3\xa0 coder dans AWS"}'
+DEBUG:botocore.hooks:Event needs-retry.translate.TranslateText: calling handler <botocore.retryhandler.RetryHandler object at 0x7fa535cd3c50>
+DEBUG:botocore.retryhandler:No retry needed.

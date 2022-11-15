@@ -1,0 +1,3 @@
+To run the program, enter the following command in the terminal:
+
+python lab_7_step_4_input_validation.py --file translate_input.json
