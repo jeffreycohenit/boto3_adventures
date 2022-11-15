@@ -1,0 +1,3 @@
+To run the program, enter the following command in the terminal:
+
+python lab_6_step_2_loops.py --file translate_input.json

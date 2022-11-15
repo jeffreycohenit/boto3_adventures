@@ -1,0 +1,3 @@
+To run the program, enter the following command in the terminal:
+
+python lab_8_step_1_simple_logging.py
